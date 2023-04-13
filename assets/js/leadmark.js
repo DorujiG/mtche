@@ -53,4 +53,6 @@ $(window).on("load", function() {
             }
         }), !1
     })
+    if ($(this).attr('class') === undefined) {
+    }
 })
