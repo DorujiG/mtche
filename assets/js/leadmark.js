@@ -56,3 +56,41 @@ $(window).on("load", function() {
     if ($(this).attr('class') === undefined) {
     }
 })
+
+
+// タイマーの日付を設定
+var countDownDate = new Date("Dec 5, 2023 11:59:00").getTime();
+// 1秒おきに更新
+var x = setInterval(function() {
+  // 今日の日付と時間を取得
+  var now = new Date().getTime();
+
+  // 日付と時間の計算
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  
+  // 日本語出力する内容
+  document.getElementById("jp_nimojapanese").innerHTML = days  +"<span>日</span>" + hours + "<span>時</span>"
+  + minutes + "<span>分</span>" + seconds + "<span>秒</span>";
+  document.getElementById("jp_shokai").innerHTML = days + 90+"<span>日</span>" + hours + "<span>時</span>"
+  + minutes + "<span>分</span>" + seconds + "<span>秒</span>";
+  document.getElementById("jp_nimoanim").innerHTML = days + 150+"<span>日</span>" + hours + "<span>時</span>"
+  + minutes + "<span>分</span>" + seconds + "<span>秒</span>";
+
+  //монгол хэл төсөлийн тоолох
+  document.getElementById("mn_nimojapanese").innerHTML = days  +"<span> өдөр</span>" + hours + "<span> цаг</span>"
+  + minutes + "<span>минут</span>" + seconds + "<span> секунт</span>";
+  document.getElementById("mn_shokai").innerHTML = days  +"<span> өдөр</span>" + hours + "<span> цаг</span>"
+  + minutes + "<span>минут</span>" + seconds + "<span> секунт</span>";
+  document.getElementById("mn_nimoanim").innerHTML = days  +"<span> өдөр</span>" + hours + "<span> цаг</span>"
+  + minutes + "<span>минут</span>" + seconds + "<span> секунт</span>";
+  // タイマー終了後
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countTimer").innerHTML = "プロジェクト完了しました。";
+  }
+}, 1000);
