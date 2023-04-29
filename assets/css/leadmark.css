@@ -11658,6 +11658,7 @@ textarea.form-control {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+          
 }
 
 .portfolio-section .filters a {
@@ -11671,6 +11672,7 @@ textarea.form-control {
   padding: 8px 14px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  white-space: nowrap;
 }
 
 .portfolio-section .filters a:first-child {
