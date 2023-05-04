@@ -74,20 +74,13 @@ var x = setInterval(function() {
   
   
   // 日本語出力する内容
-  document.getElementById("jp_nimojapanese").innerHTML = days  +"<span>日</span>" + hours + "<span>時</span>"
+  document.getElementById("jp_nimojapanese").innerHTML = days-100+"<span>日</span>" + hours + "<span>時</span>"
   + minutes + "<span>分</span>" + seconds + "<span>秒</span>";
   document.getElementById("jp_shokai").innerHTML = days + 90+"<span>日</span>" + hours + "<span>時</span>"
   + minutes + "<span>分</span>" + seconds + "<span>秒</span>";
   document.getElementById("jp_nimoanim").innerHTML = days + 150+"<span>日</span>" + hours + "<span>時</span>"
   + minutes + "<span>分</span>" + seconds + "<span>秒</span>";
 
-  //монгол хэл төсөлийн тоолох
-  document.getElementById("mn_nimojapanese").innerHTML = days  +"<span> өдөр</span>" + hours + "<span> цаг</span>"
-  + minutes + "<span>минут</span>" + seconds + "<span> секунт</span>";
-  document.getElementById("mn_shokai").innerHTML = days  +"<span> өдөр</span>" + hours + "<span> цаг</span>"
-  + minutes + "<span>минут</span>" + seconds + "<span> секунт</span>";
-  document.getElementById("mn_nimoanim").innerHTML = days  +"<span> өдөр</span>" + hours + "<span> цаг</span>"
-  + minutes + "<span>минут</span>" + seconds + "<span> секунт</span>";
   // タイマー終了後
   if (distance < 0) {
     clearInterval(x);
