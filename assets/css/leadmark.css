@@ -11423,6 +11423,7 @@ textarea.form-control {
   min-height: 500px;
   background: url(../imgs/world.jpg) no-repeat center center fixed;
   background-size: cover;
+  background-attachment : fixed;
   overflow: hidden;
 }
 
